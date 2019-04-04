@@ -31,5 +31,37 @@ if(saldo5.textContent < 0){
     saldo5.style.color = "#cc2222";
 }
 
+var botao = document.querySelector("#adicionar-receita");
+botao.addEventListener("click", function(evento){
+    evento.preventDefault();
+    form = document.formulario;
+    var form = document.formulario;
+    var descricao = form.descricao.value;
+    var categoria = form.categoria.value;
+    var data = form.data.value;
+    var valor = parseFloat(form.valor.value);
+    var erros = documento.querySelector(".erros");
 
+    limparErros(erros);
 
+    if (descricao.length <=0) {
+        erros.textContent += "*A descrição é obrigatória.\n"
+    }
+
+    if (categoria.length <=0) {
+        erros.textContent += "*A categoria é obrigatória.\n"
+    }
+
+    if (data.length <=0) {
+        erros.textContent += "*A data é obrigatória.\n"
+    }
+
+    if (valor.length ==0) {
+        erros.textContent += "*O valor deve ser diferente de zero(0).\n"
+    }
+
+ });
+
+ function limparErros(erros) {
+     erros.innerHTML = "";
+ }

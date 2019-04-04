@@ -69,13 +69,14 @@
 						</tr>
 					</tbody>
 				</table>
-
 			</section>
 
 			<section class="container">
 			<h2 id="titulo-form">Adicionar nova receita</h2>
-			<div class=""
-		    <form id="form-adiciona">
+			<div class="erros">
+
+			</div>
+		    <form id="form-adiciona" name="formulario">
 		        <div class="">
 		            <label for="descricao">Descrição:</label>
 		            <input id="descricao" name="descricao" type="text" placeholder="digite a descrição da sua receita" class="campo">
@@ -90,7 +91,7 @@
 		        </div>
 		        <div class="grupo">
 		            <label for="valor">Valor: R$</label>
-		            <input id="valor" type="text" placeholder="digite o valor da sua receita" class="campo campo-medio">
+		            <input id="valor" name="valor" type="text" placeholder="digite o valor da sua receita" class="campo campo-medio">
 		        </div>
 
 		        <button id="adicionar-receita" class="botao bto-principal">Adicionar</button>
